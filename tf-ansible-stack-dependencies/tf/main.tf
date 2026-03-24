@@ -44,8 +44,8 @@ locals {
 }
 
 resource "aws_key_pair" "ssh_key" {
-  key_name   = "ec2"
-  public_key = file(var.public_key)
+  key_name   = "ansible-ed25519-key"
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIyZVA9HAxeWaKZaPsvq1N8I9umnkoUtOHBoAr+2XH+X shantanu@Shantanu"
 }
 
 resource "aws_instance" "this" {
